@@ -21,8 +21,8 @@ public class Week1
         System.out.println("Hello " + name);
         System.out.println("nice to meet you!");
 
-        int id = InputReader.getInt("Enter your ID > ");
-        System.out.println("Your id is " + id);
+        int id = InputReader.getInt("Enter your ID: ");
+        System.out.println("Your ID is " + id);
 
     } 
 }
