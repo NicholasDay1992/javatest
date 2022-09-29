@@ -21,10 +21,8 @@ public class Week1
         System.out.println("Hello " + name);
         System.out.println("nice to meet you!");
 
-        int id = InputReader.getInt("Enter your ID ");
-        System.out.println("Your ID is " + id);
+        int id = InputReader.getInt("Enter your ID > ");
+        System.out.println("Your id is " + id);
 
-        double test = InputReader.getDouble("Enter a double ");
-        System.out.println("Your double number is " + test);
     } 
 }
