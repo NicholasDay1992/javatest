@@ -27,5 +27,7 @@ public class Week1
         double mark = InputReader.getDouble("Enter your mark: ");
         System.out.println("Your mark is " + mark);
 
+        int age;
+
     } 
 }
