@@ -15,5 +15,12 @@ public class Week02
         System.out.println();
         System.out.println(" by Nicholas Day and Derek Peacock");
         System.out.println();
+
+        final int SEVEN = 7;
+        for(int count = 1; count <= 12; count++)
+        {
+            System.out.println(count + " x " + SEVEN + " = " + (count* SEVEN) );
+        }
+
     }     
 }
