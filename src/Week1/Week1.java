@@ -30,7 +30,7 @@ public class Week1
         int perimeter = (height + length) * 2;
         int area = (length * height);
 
-        System.out.println("The perimeter is " + perimeter + "\n"
-           + "\tThe area is " );
+        System.out.println("The perimeter is " + perimeter);
+        System.out.println("The area is " + area);
     } 
 }
