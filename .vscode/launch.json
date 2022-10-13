@@ -1,0 +1,63 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "javatest_15afdef3"
+        },
+        {
+            "type": "java",
+            "name": "Launch Week1",
+            "request": "launch",
+            "mainClass": "Week1.Week1",
+            "projectName": "javatest_15afdef3"
+        },
+        {
+            "type": "java",
+            "name": "Launch Week02",
+            "request": "launch",
+            "mainClass": "Week2.Week02",
+            "projectName": "javatest_15afdef3"
+        },
+        {
+            "type": "java",
+            "name": "Launch Week03",
+            "request": "launch",
+            "mainClass": "Week3.Week03",
+            "projectName": "javatest_15afdef3"
+        },
+        {
+            "type": "java",
+            "name": "Launch Week04",
+            "request": "launch",
+            "mainClass": "Week4.Week04",
+            "projectName": "javatest_15afdef3"
+        },
+        {
+            "type": "java",
+            "name": "Launch Week05",
+            "request": "launch",
+            "mainClass": "Week5.Week05",
+            "projectName": "javatest_15afdef3"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zuul",
+            "request": "launch",
+            "mainClass": "Zuul.Zuul",
+            "projectName": "javatest_15afdef3"
+        }
+    ]
+}

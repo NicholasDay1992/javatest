@@ -19,6 +19,7 @@ public class Week1
 
         double total = 0;
         int count = 0;
+        String name = "Nick";
         while( count < 3)
         {
                total = total + InputReader.getDouble("Enter number : ");
