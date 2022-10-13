@@ -11,7 +11,7 @@ public class Student
         this.id = id;
         this.name = name;
     }
-    
+
     //print method
     public void print(){
         System.out.println("ID: " + this.id);

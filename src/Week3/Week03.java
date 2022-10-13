@@ -19,6 +19,10 @@ public class Week03
  
         Student nick = new Student(251533, "Nick");
         nick.print();
+
+        Student mustafa = new Student(125323, "Mustafa");
+        mustafa.print();
+        
     }     
     
 }
