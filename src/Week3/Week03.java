@@ -21,6 +21,7 @@ public class Week03
        Student jeremiah = new Student(21261252, "Jeremiah" );
        jeremiah.print();
 
+       int num;
        
     }     
     
