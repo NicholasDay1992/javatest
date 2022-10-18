@@ -1,5 +1,8 @@
 package Week4;
 
+import java.util.ArrayList;
+import Week3.Student;
+
 public class Week04 
 {
     public static final String CONSOLE_CLEAR = "\033[H\033[2J";
@@ -15,6 +18,27 @@ public class Week04
         System.out.println();
         System.out.println(" by Nicholas Day and Derek Peacock");
         System.out.println();
+
+
+        Student nick = new Student(251533, "Nick");
+        //nick.print();
+
+        Student onkar = new Student(125323, "Onkar");
+        //onkar.print();
+
+        Student rayan = new Student(12561263, "Rayan");
+        //rayan.print();
+
+        ArrayList<Student> students = new ArrayList<Student>();
+        students.add(rayan);
+        students.add(nick);
+        students.add(onkar);
+
+        for(Student student : students)
+        {
+            student.print();
+        }
+
     }     
     
 }

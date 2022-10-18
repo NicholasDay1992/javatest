@@ -13,7 +13,8 @@ public class Student
     }
 
     //print method
-    public void print(){
+    public void print()
+    {
         System.out.println("ID: " + this.id);
         System.out.println("Name: " + this.name);  
     }
