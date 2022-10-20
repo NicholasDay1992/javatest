@@ -21,23 +21,10 @@ public class Week04
 
 
         Student nick = new Student(251533, "Nick");
-        //nick.print();
+        nick.print();
 
         Student onkar = new Student(125323, "Onkar");
-        //onkar.print();
-
-        Student rayan = new Student(12561263, "Rayan");
-        //rayan.print();
-
-        ArrayList<Student> students = new ArrayList<Student>();
-        students.add(rayan);
-        students.add(nick);
-        students.add(onkar);
-
-        for(Student student : students)
-        {
-            student.print();
-        }
+        onkar.print();
 
     }     
     
