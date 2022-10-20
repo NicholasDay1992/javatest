@@ -1,5 +1,6 @@
 package Week3;
 
+
 import java.util.ArrayList;
 
 public class Week03 
@@ -28,10 +29,10 @@ public class Week03
         Student uthman = new Student(25142312, "Uthman");
         //uthman.print();
 
-        ArrayList<Student> students = new ArrayList<>();
-        students.add(nick);
-        students.add(onkar);
+        ArrayList<Student> students = new ArrayList<Student>();
         students.add(uthman);
+        students.add(onkar);
+        students.add(nick);
 
         for(Student student : students)
         {
