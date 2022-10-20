@@ -26,6 +26,19 @@ public class Week04
         Student onkar = new Student(125323, "Onkar");
         onkar.print();
 
+        Student uthman = new Student(25142312, "Uthman");
+        //uthman.print();
+
+        ArrayList<Student> students = new ArrayList<Student>();
+        students.add(uthman);
+        students.add(onkar);
+        students.add(nick);
+
+        for(Student student : students)
+        {
+            student.print();
+        }
+        
     }     
     
 }

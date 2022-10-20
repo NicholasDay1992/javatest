@@ -1,5 +1,8 @@
 package Week3;
 
+import java.util.ArrayList;
+import Week4.Module;
+
 public class Student 
 {
     private int id;
@@ -15,8 +18,7 @@ public class Student
     //print method
     public void print()
     {
-        System.out.println("ID: " + this.id);
-        System.out.println("Name: " + this.name);  
+        System.out.println("ID: " + this.id + " Name: " + this.name);  
     }
 
 }

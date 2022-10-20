@@ -26,13 +26,13 @@ public class Week03
         Student onkar = new Student(125323, "Onkar");
         //onkar.print();
 
-        Student uthman = new Student(25142312, "Uthman");
+        Student uthman = new Student(2612512, "Uthman");
         //uthman.print();
 
         ArrayList<Student> students = new ArrayList<Student>();
-        students.add(uthman);
-        students.add(onkar);
         students.add(nick);
+        students.add(onkar);
+        students.add(uthman);
 
         for(Student student : students)
         {
