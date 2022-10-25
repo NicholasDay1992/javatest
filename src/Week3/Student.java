@@ -8,6 +8,13 @@ public class Student
     private int id;
     private String name;
 
+
+    public Student()
+    {
+        id = 0;
+        name = "";
+    }
+
     //Constructor
     public Student(int id, String name)
     {
@@ -18,7 +25,7 @@ public class Student
     //print method
     public void print()
     {
-        System.out.println("ID: " + this.id + " Name: " + this.name);  
+        System.out.println("ID: " + this.id + "\tName: " + this.name);  
     }
 
 }
