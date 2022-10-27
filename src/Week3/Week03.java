@@ -20,7 +20,7 @@ public class Week03
         System.out.println();
 
  
-        Student nick = new Student();
+        Student nick = new Student(17126124, "Nick");
         //nick.print();
         
         Student onkar = new Student(125323, "Onkar");
