@@ -8,13 +8,6 @@ public class Student
     private int id;
     private String name;
 
-
-    public Student()
-    {
-        id = 0;
-        name = "";
-    }
-
     //Constructor
     public Student(int id, String name)
     {
