@@ -29,15 +29,17 @@ public class Week03
         Student uthman = new Student(2612512, "Uthman");
         //uthman.print();
 
-        ArrayList<Student> students = new ArrayList<Student>();
-        students.add(nick);
-        students.add(onkar);
-        students.add(uthman);
+        ArrayList<Student> studentlist = new ArrayList<Student>();
+        studentlist.add(nick);
+        studentlist.add(onkar);
+        studentlist.add(uthman);
 
-        for(Student student : students)
+        for(Student current : studentlist)
         {
-            student.print();
+            current.print();
+            //System.out.println("ID: " + student.getID() + " , name: " + student.getName() );
         }
+
     }     
     
 }

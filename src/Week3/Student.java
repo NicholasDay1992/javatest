@@ -21,4 +21,15 @@ public class Student
         System.out.println("ID: " + this.id + "\tName: " + this.name);  
     }
 
+    public int getID()
+    {
+        return this.id;
+    }
+
+    public String getName()
+    {
+        return this.name;
+    }
+
+
 }
