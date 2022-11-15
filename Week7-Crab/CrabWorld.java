@@ -1,10 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.Random;
 
 /**
- * Write a description of class MyWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
  */
 public class CrabWorld extends World
 {
@@ -14,9 +11,10 @@ public class CrabWorld extends World
     private Lobster lobster;
     
     private Worm[] worms;
-    private int wormSize;
+    private int wormSize = 30;
     private int remainingWorms = MAXN_WORMS;
     
+    private Random generator = new Random();
     private Counter score;
     
     /**
@@ -35,8 +33,6 @@ public class CrabWorld extends World
         addObject(lobster, 600, 400);
         
         worms = new Worm[MAXN_WORMS];
-        
-        wormSize = 30;
         addWorms();
         
         setupScore();
@@ -47,15 +43,21 @@ public class CrabWorld extends World
      */
     public void addWorms()
     {
-
+        createWorm();
     }
     
     /**
      * This method creates & adds a single worm to a random position in
      * the world that is not too near the edge of the screen
      */
-    private void createWorm(int number)
+    private void createWorm()
     {
+        Worm worm = new Worm();
+        
+        int x = generator.nextInt(getWidth());
+        int y = generator.nextInt(getHeight());
+        
+         addObject(worm, x, y);
     }
     
     public void score()
@@ -68,8 +70,13 @@ public class CrabWorld extends World
         addObject (score, 60, 30);
     }
     
-    public void endGame()
+    public void loseGame()
     {
         showText("Game Over: You have Lost!", 400, 300);
     }
+    
+   public void winGame()
+    {
+        showText("Game Over: You have Won!", 400, 300);
+    }    
 }

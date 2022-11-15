@@ -9,8 +9,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Paddle extends ShapeSprite
 {
-    protected int speed = 4;
-    
     /**
      * Create a blue rectangle using a Greenfoot Image
      * 
@@ -39,16 +37,6 @@ public class Paddle extends ShapeSprite
         int x = getX(); int y = getY();
         int halfWidth = width / 2;
         
-        if(Greenfoot.isKeyDown("left") && x > halfWidth)
-        {
-            x -= speed;
-        }
-        
-        if(Greenfoot.isKeyDown("right") && !isAtEdge())
-        {
-            x += speed;
-        }        
-        
         if(Greenfoot.isKeyDown("down") && !isAtEdge())
         {
             y += speed;
@@ -60,10 +48,5 @@ public class Paddle extends ShapeSprite
         }
         
         setLocation(x, y);
-    }
- 
-    public void setSpeed(int speed)
-    {
-        this.speed = speed;
     }
 }

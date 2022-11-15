@@ -1,13 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
+ * This class sets up the world for Breakout
+ * with a paddle, a ball and some bricks
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
 public class GameWorld extends World
 {
+    private static final int SCREEN_WIDTH = 600;
+    private static final int SCREEN_HEIGHT = 400;
+    
     private Paddle paddle;
     private Ball ball;
     
@@ -19,8 +23,7 @@ public class GameWorld extends World
      */
     public GameWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(SCREEN_WIDTH, SCREEN_HEIGHT, 1); 
         
         paddle = new Paddle(10, 80);
         ball = new Ball(20,20);

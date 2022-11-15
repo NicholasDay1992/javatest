@@ -2,8 +2,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Move the ball around the screen using the 
- * inbuilt tutrle graphics.  Ball has a chosen 
- * image.
+ * inbuilt turtle graphics.  Ball is a rectangle
+ * drawn as an image.
  * 
  * @author Derek Peacock 
  * @version 0
@@ -11,7 +11,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Ball extends ShapeSprite
 {
     private GameWorld game;
-    private int speed = 4;
     
     // Current velocity change in x and y
     

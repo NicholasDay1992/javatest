@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Crab extends Actor
+public class Crab extends Animal
 {
     protected int width;
     protected int height;
@@ -25,8 +25,6 @@ public class Crab extends Actor
         width = image.getWidth();
         height = image.getHeight();
         image.scale((int)(width * 0.8), (int)(height * 0.8));
-        
-        setRotation(90);
     }
     
     /**
@@ -36,7 +34,8 @@ public class Crab extends Actor
      */
     public void act()
     {
-        move4Ways();  // or moveAndTurn
+        turnAndMove(); 
+        eat(Worm.class);
     }
     
     /**
@@ -44,8 +43,22 @@ public class Crab extends Actor
      * left or to the right, and then the worm moves in that
      * direction
      */
-    public void moveAndTurn()
+    public void turnAndMove()
     {
+        if(Greenfoot.isKeyDown("left"))
+        {
+            turn(-turnAngle);
+        }
+        
+        if(Greenfoot.isKeyDown("right"))
+        {
+            turn(turnAngle);
+        }  
+        
+        if(Greenfoot.isKeyDown("space"))
+        {
+             move(speed);    
+        }         
     }
     
     /**
@@ -55,5 +68,33 @@ public class Crab extends Actor
      */
     public void move4Ways()
     {
+        int x = getX(); int y = getY();
+        int halfWidth = width / 2;
+        
+        if(Greenfoot.isKeyDown("left") && x > halfWidth)
+        {
+            setRotation(270);
+            x -= speed;
+        }
+        
+        if(Greenfoot.isKeyDown("right") && !isAtEdge())
+        {
+            setRotation(90);
+            x += speed;
+        }        
+        
+        if(Greenfoot.isKeyDown("down") && !isAtEdge())
+        {
+            setRotation(180);
+            y += speed;
+        } 
+        
+        if(Greenfoot.isKeyDown("up") && y > speed)
+        {
+            setRotation(0);
+            y -= speed;
+        }
+        
+        setLocation(x, y);        
     }
 }

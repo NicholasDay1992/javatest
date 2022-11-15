@@ -52,5 +52,10 @@ public class ShapeSprite extends Actor
             image.fill();
         else
             image.fillOval(0, 0, width, height);
-    }    
+    }
+    
+    public void setSpeed(int speed)
+    {
+        this.speed = speed;
+    }
 }
