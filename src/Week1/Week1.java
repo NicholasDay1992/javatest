@@ -17,6 +17,8 @@ public class Week1
         System.out.println(" by Nicholas Day and Derek Peacock");
         System.out.println();
 
+        int test; 
+        
         double total = 0;
         int count = 0;
         String name = "Nick";
