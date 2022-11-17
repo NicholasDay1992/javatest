@@ -5,7 +5,8 @@ import java.util.Random;
  */
 public class CrabWorld extends World
 {
-    public static final int MAXN_WORMS = 20;
+    public static final int MAXN_WORMS = 5;
+    public static final int SCORE_INCREMENT = 100;
     
     private Crab crab;
     private Lobster lobster;
@@ -16,6 +17,7 @@ public class CrabWorld extends World
     
     private Random generator = new Random();
     private Counter score;
+    private Counter wormCount;
     
     /**
      * Constructor for objects of class MyWorld.
@@ -36,6 +38,7 @@ public class CrabWorld extends World
         addWorms();
         
         setupScore();
+        setupWormCount();
     }
     
     /**
@@ -43,7 +46,11 @@ public class CrabWorld extends World
      */
     public void addWorms()
     {
-        createWorm();
+        for(int i = 0; i < MAXN_WORMS; i++)
+        {
+           createWorm(); 
+        }
+        
     }
     
     /**
@@ -60,14 +67,42 @@ public class CrabWorld extends World
          addObject(worm, x, y);
     }
     
-    public void score()
+    public void increaseScore()
     {
+        score.add(SCORE_INCREMENT);
     }
     
     private void setupScore()
     {
         score = new Counter("Score: ");
         addObject (score, 60, 30);
+    }
+    
+    private void setupWormCount()
+    {
+        wormCount = new Counter("Worms Remaining: ");
+        wormCount.add(remainingWorms);
+        addObject (wormCount, 680, 30);
+    }
+    
+    public void updateWormDisplay()
+    {
+        wormCount.setValue(remainingWorms);
+    }
+    
+    public void decreaseWorms()
+    {
+        remainingWorms--;
+        updateWormDisplay();
+        checkWin();
+    }
+    
+    public void checkWin()
+    {
+        if(remainingWorms == 0)
+        {
+            winGame();
+        }
     }
     
     public void loseGame()

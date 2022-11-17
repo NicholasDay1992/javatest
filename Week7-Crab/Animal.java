@@ -54,11 +54,14 @@ public class Animal extends Actor
      * is such an object where we currently are. Otherwise this method does
      * nothing.
      */
-    public void eat(Class foodClass)
+    public boolean eat(Class foodClass)
     {
         Actor actor = getOneObjectAtOffset(0, 0, foodClass);
-        if(actor != null) {
+        if(actor != null) 
+        {
             getWorld().removeObject(actor);
+            return true;
         }
+        return false;
     }
 }

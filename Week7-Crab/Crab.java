@@ -34,8 +34,19 @@ public class Crab extends Animal
      */
     public void act()
     {
-        turnAndMove(); 
-        eat(Worm.class);
+        turnAndMove();
+        if(eat(Worm.class) == true)
+        {
+            Greenfoot.playSound("slurp.wav");
+            
+            //increaseScore
+            world = (CrabWorld)getWorld();
+            world.increaseScore();
+            
+            world.decreaseWorms();
+            world.updateWormDisplay();
+           
+        }
     }
     
     /**

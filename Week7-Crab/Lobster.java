@@ -13,6 +13,8 @@ public class Lobster extends Animal
     private int speed = 2;
     private Random generator = new Random();
     
+    private CrabWorld world;
+    
     /**
      * This method looks to see if the crab is within a certain
      * distances and if so turns in that direction.  If not within
@@ -23,6 +25,18 @@ public class Lobster extends Animal
     {
         // Add your action code here.
         move(speed);
+        if(atWorldEdge() == true )
+        {
+            turn(180);
+        }
+        
+        if(eat(Crab.class) == true)
+        {
+            Greenfoot.playSound("au.wav");
+            
+            world = (CrabWorld)getWorld();
+            world.loseGame();
+        }
     }
     
 }
